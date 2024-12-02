@@ -1,0 +1,87 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+    .btn{
+        @apply bg-color-secondary px-9 py-3 rounded-md capitalize text-color-white duration-200 font-bold hover:text-color-secondary hover:bg-color-white;
+    }
+
+
+    .title{
+        @apply text-3xl mb-4 md:text-4xl font-bold leading-snug;
+    }
+
+    .sub-title{
+        @apply text-color-secondary font-bold  mb-4;
+    }
+
+    .active-client{
+        border: 2px solid #ff6303;
+
+    }
+
+    .client-text{
+        display: none;
+        transform: translateY(50px);
+    }
+
+    .client-text.active-client-text{
+        display: block;
+        animation: moveUp 1s forwards;
+    }
+
+    @keyframes moveUp{
+        0%{
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+    #paralaxone{
+        position: relative!important;
+        display: flex !important;
+    }
+
+    .hero-img-relative{
+        position: relative!important;
+    }
+
+
+    /* CSS For Pricing Card */
+    .price__card{
+        perspective: 1000px;
+    }
+
+    .card__front,
+    .card__back{
+        backface-visibility: hidden;
+        transition: all 1s ease;
+    }
+
+    .card__front{
+        overflow: hidden;
+
+    }
+    
+    .rotate-y-180{
+        transform: rotateY(180deg);
+    }
+
+    .-rotate-y-180{
+        transform: rotateY(-180deg);
+    }
+
+
+    .card__back{
+  
+
+    }
+
+    .card__btn{
+        @apply bg-color-primary-dark w-full py-3 rounded-lg font-bold hover:bg-color-secondary hover:text-color-white duration-200;
+    }
